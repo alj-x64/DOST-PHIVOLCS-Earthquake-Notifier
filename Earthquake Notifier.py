@@ -60,7 +60,7 @@ def save_last_record(data):
 
 def notify(eq):
     title = f"Earthquake Alert - Magnitude {eq['magnitude']}"
-    message = f"{eq['location']} | {eq['datetime']}"
+    message = f"Location: {eq['location']} \n {eq['datetime']} \n Depth: {eq['depth']} km"
     print("Notifying:", title, message)
     notification.notify(
         title=title,
@@ -94,4 +94,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
