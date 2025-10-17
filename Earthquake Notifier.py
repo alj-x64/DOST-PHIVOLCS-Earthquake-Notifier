@@ -44,8 +44,8 @@ def get_latest_earthquake():
         "latitude": cols[1],
         "longitude": cols[2],
         "depth": cols[3],
-        "magnitude": cols[4].replace("\u00c2",""), #this should remove the strange symbol before the degree sign.
-        "location": cols[5]
+        "magnitude": cols[4], 
+        "location": cols[5].replace("\u00c2","") #this should remove the strange symbol before the degree sign.
     }
 
 def load_last_record():
@@ -94,3 +94,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
